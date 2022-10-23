@@ -10,6 +10,8 @@ public interface AbstractBS {
 
         void sethits();
 
+
+
         String getShipCoordinates();
 
         void setShipCoordinates();
