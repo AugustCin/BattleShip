@@ -1,17 +1,19 @@
-package BattleShipTest;
+package abdn.scnu.cs;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class BattleShip implements AbstractBS{
-    BattleShip(){
+public class BattleShip extends AbstractBattleShip {
+    BattleShip(String ShipName) {
         String shipOrientation;
         Scanner input = new Scanner(System.in);
-        String name = input.next();
+        super.name = input.next();
+
         int horizontal = 0;
         int vertical = 0;
-        BattleShip ship = new BattleShip();
-        for(int i = 0; i<10; i++){
+
+        for (int i = 0; i < 10; i++) {
+            BattleShip ship = new BattleShip("Ships" +i);
             if (ship.getShipOrientation() == "horozontal") {
                 horizontal++;
             } else if (ship.getShipOrientation() == "vertical") {
@@ -19,12 +21,12 @@ public class BattleShip implements AbstractBS{
             }
         }
 
-
-    public void checkAttack(int X,int Y){
-        return;
+    }
+    public boolean checkAttack(int X, int Y){
+        return false;
     }
 
-    }
+
 
 
 
@@ -35,8 +37,8 @@ public class BattleShip implements AbstractBS{
     }
 
     @Override
-    public String getHits() {
-        return null;
+    public int getHits() {
+        return 0;
     }
 
     @Override
@@ -51,13 +53,23 @@ public class BattleShip implements AbstractBS{
     }
 
     @Override
+    public void setHits(int numberOfHits) {
+
+    }
+
+    @Override
     public void sethits() {
 
     }
 
     @Override
-    public String getShipCoordinates() {
+    public int[][] getShipCoordinates() {
         return null;
+    }
+
+    @Override
+    public void setShipCoordinates(int[][] coordinates) {
+
     }
 
     @Override

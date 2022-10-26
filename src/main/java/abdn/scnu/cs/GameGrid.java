@@ -1,4 +1,4 @@
-package BattleShipTest;
+package abdn.scnu.cs;
 import java.util.Scanner;
 
 
